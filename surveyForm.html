@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Engineering Student Survey</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Welcome to the Engineering Student Survey</h1>
+        <p>Please take a moment to provide us with some information about yourself.</p>
+        <button onclick="startSurvey()">Start Survey</button>
+    </div>
+
+
+    
+
+
+    <div class="container">
+        <h1>Engineering Student Survey</h1>
+        <form id="surveyForm" action="process.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <label for="major">Major:</label>
+            <input type="text" id="major" name="major" required><br>
+
+            <label for="interests">Interests:</label>
+            <textarea id="interests" name="interests" rows="2" required></textarea><br>
+
+            <button type="button" onclick="prevPage()">Previous</button>
+            <button type="button" onclick="startSurvey2()">Next</button>
+        </form>
+    </div>
+
+
+    <div class="container">
+        <h1>Engineering Student Survey</h1>
+        <form id="surveyForm" action="process.php" method="post">
+            <label for="name">University:</label>
+            <input type="text" id="University" name="University" required><br>
+-
+            <label for="passoutyear">passout year:</label>
+            <input type="number" id="passoutyear" name="passoutyear" required><br>
+
+            <label for="Specialization">Specialization:</label>
+            <input type="text" id="Specialization" name="Specialization" required><br>
+
+            <label for="Aboutyou">About you :</label>
+            <textarea id="Aboutyou" name="Aboutyou" rows="2" required></textarea><br>
+
+            <button type="button" onclick="prevPage()">Previous</button>
+            <button type="button" onclick="nextPage()">Next</button>
+        </form>
+    </div>
+
+    
+    <div class="container">
+        <h1>Engineering Student Survey</h1>
+        <h2>Confirm Your Information</h2>
+        <p>Name: <span id="confirmName"></span></p>
+        <p>Age: <span id="confirmAge"></span></p>
+        <p>Major: <span id="confirmMajor"></span></p>
+        <p>Interests: <span id="confirmInterests"></span></p>
+        <p>University: <span id="confirmUniversity"></span></p>
+        <p>passoutyear: <span id="confirmpassoutyear"></span></p>
+        <p>Specialization: <span id="confirmSpecialization"></span></p>
+        <p>Aboutyou: <span id="confirmAboutyou"></span></p>
+
+        <form action="submit.php" method="post">
+            <input type="hidden" id="hiddenName" name="name">
+            <input type="hidden" id="hiddenAge" name="age">
+            <input type="hidden" id="hiddenMajor" name="major">
+            <input type="hidden" id="hiddenInterests" name="interests">
+            <input type="hidden" id="hiddenUniversity" name="University">
+            <input type="hidden" id="hiddenpassoutyear" name="passoutyear">
+            <input type="hidden" id="hiddenSpecialization" name="Specialization">
+            <input type="hidden" id="hiddenAboutyou" name="Aboutyou">
+            <button type="button" onclick="prevPage()">Previous</button>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
